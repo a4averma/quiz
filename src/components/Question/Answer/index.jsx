@@ -7,25 +7,24 @@ export default function Answer({ option }) {
   const calculateBackground = (option) => {
     if (currentQuestionAnswer) {
       if (option === questions[currentQuestion].correct_answer) {
-        return "yellow";
+        return "correct-answer";
       } else if (
         option === currentQuestionAnswer &&
         currentQuestionAnswer !== questions[currentQuestion].correct_answer
       ) {
-        return "black";
+        return "wrong-answer";
       } else {
-        return "grey";
+        return "other-answer";
       }
     }
-    return "white";
+    return "no-answer";
   };
   return (
     <section
       onClick={() => handleAnswer(option)}
-      className="answer-box cursor-pointer padding"
-      style={{
-        backgroundColor: calculateBackground(option),
-      }}
+      className={`answer-box cursor-pointer padding ${calculateBackground(
+        option
+      )}`}
     >
       {option}
     </section>

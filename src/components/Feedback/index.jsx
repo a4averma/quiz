@@ -1,4 +1,5 @@
 import { useQuestions } from "../../context/Question/action";
+import "./styles.scss";
 
 export default function Feedback() {
   const {
@@ -9,16 +10,18 @@ export default function Feedback() {
   } = useQuestions();
 
   return currentQuestionAnswer.length ? (
-    <section>
-      <p>
+    <section className="wrapper padding">
+      <div className="feedback">
         {currentQuestionAnswer === questions[currentQuestion].correct_answer
           ? "Correct!"
           : "Sorry!"}
-      </p>
+      </div>
       {questions.length === currentQuestion + 1 ? (
         ""
       ) : (
-        <div onClick={handleNextQuestion}>Next Question</div>
+        <div className="action cursor-pointer" onClick={handleNextQuestion}>
+          Next Question
+        </div>
       )}
     </section>
   ) : (

@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  @media only screen and (min-width: 580px) {
+    flex-direction: row;
+    max-width: 500px
+  }
+  @media only screen and (min-width: 1200px) {
+    flex-direction: row;
+    max-width: 100%
+  }
+  .feedback {
+    max-width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1.4rem;
+    border: 0;
+    @media only screen and (min-width: 580px) {
+      border: 1px solid black;
+      width: 66%;
+    }
+    @media only screen and (min-width: 1200px) {
+      border: 1px solid black;
+      width: 720px;
+    }
+  }
+  .action {
+    max-width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #F4F4F4;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (min-width: 580px) {
+      width: 33%;
+    }
+    @media only screen and (min-width: 1200px) {
+      width: 220px;
+    }
+  }
+}

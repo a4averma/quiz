@@ -4,7 +4,7 @@ import Feedback from "./components/Feedback";
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <Stats />
       <Question />
       <Feedback />

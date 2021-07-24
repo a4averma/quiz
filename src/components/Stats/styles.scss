@@ -1,0 +1,12 @@
+.stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  h1 {
+    font-weight: 100;
+  }
+  .percent {
+    font-size: 1.5rem;
+  }
+}
